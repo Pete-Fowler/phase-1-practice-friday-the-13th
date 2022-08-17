@@ -4,6 +4,7 @@ const addImages = (movies) => {
     const img = document.createElement('img');
     img.src = movie.image;
     list.append(img);
+    img.addEventListener('click', () => addDetails(movie));
   });
 }
 
@@ -31,4 +32,5 @@ const getMovies = () => {
 
 const init = (() => {
   getMovies();
+
 })();
